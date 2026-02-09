@@ -2,7 +2,7 @@ aiofiles==24.1.0
 annotated-types==0.7.0
 anyio==4.10.0
 appnope==0.1.4
-asgiref==3.11.0
+asgiref==3.11.1
 astroid==4.0.3
 asttokens==3.0.1
 backcall==0.2.0
