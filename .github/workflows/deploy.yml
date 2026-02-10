@@ -27,11 +27,9 @@ jobs:
             git pull origin main &&
             source venv/bin/activate &&
             pip install -r requirements.txt &&
-            sudo chown -R $(whoami):$(whoami) static/ || true &&
-            sudo chmod -R 755 static/ || true &&
-            rm -rf static/ &&
             python manage.py collectstatic --noinput &&
-            sudo chown -R ${{ secrets.DO_USER }}:${{ secrets.DO_USER }} static/ &&
+            sudo chown -R www-data:www-data static/ &&
+            sudo chmod -R 755 static/ &&
             python manage.py migrate &&
             sudo systemctl restart gunicorn &&
             sudo systemctl daemon-reload &&
