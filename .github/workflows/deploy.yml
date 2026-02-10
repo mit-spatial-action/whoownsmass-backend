@@ -27,7 +27,7 @@ jobs:
             git pull origin main &&
             source venv/bin/activate &&
             pip install -r requirements.txt &&
-            chmod -R u+w static/ &&
+            chmod -R u+w static/ || true &&
             python manage.py collectstatic --noinput &&
             python manage.py migrate &&
             sudo systemctl restart gunicorn &&
