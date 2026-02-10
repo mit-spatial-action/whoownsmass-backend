@@ -27,8 +27,8 @@ jobs:
             git pull origin main &&
             source venv/bin/activate &&
             pip install -r requirements.txt &&
-            sudo chown -R ${{ secrets.DO_USER }}:${{ secrets.DO_USER }} static/ &&
-            sudo rm -rf static/ || true &&
+            chown -R ${{ secrets.DO_USER }}:${{ secrets.DO_USER }} static/ &&
+            rm -rf static/ || true &&
             python manage.py collectstatic --noinput &&
             python manage.py migrate &&
             sudo systemctl restart gunicorn &&
