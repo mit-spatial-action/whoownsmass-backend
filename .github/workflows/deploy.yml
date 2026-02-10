@@ -20,8 +20,6 @@ jobs:
           echo "${{ secrets.DO_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.DO_HOST }} >> ~/.ssh/known_hosts
-      - name: Fix permissions on static files
-        run: chmod -R u+w static/
       - name: Deploy to server
         run: |
           ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
@@ -30,6 +28,7 @@ jobs:
             source venv/bin/activate &&
             pip install -r requirements.txt &&
             python manage.py collectstatic --noinput &&
+            chmod -R u+w static/ &&
             python manage.py migrate &&
             sudo systemctl restart gunicorn &&
             sudo systemctl daemon-reload &&
