@@ -55,7 +55,7 @@ psycopg-binary==3.3.2
 psycopg2-binary==2.9.11
 ptyprocess==0.7.0
 pure_eval==0.2.3
-pydantic==2.11.7
+pydantic==2.12.5
 pydantic-settings==2.10.1
 pydantic_core==2.33.2
 Pygments==2.19.2
