@@ -7,7 +7,7 @@ astroid==4.0.3
 asttokens==3.0.1
 backcall==0.2.0
 black==25.1.0
-certifi==2025.8.3
+certifi==2026.1.4
 click==8.2.1
 decorator==5.2.1
 dill==0.4.0
