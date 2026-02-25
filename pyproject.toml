@@ -50,7 +50,7 @@ dependencies = [
     "mdurl==0.1.2",
     "mypy-extensions==1.1.0",
     "numpy==2.3.2",
-    "packaging==25.0",
+    "packaging==26.0",
     "parso==0.8.5",
     "pathspec==1.0.4",
     "pexpect==4.9.0",
