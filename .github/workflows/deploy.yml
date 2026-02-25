@@ -24,18 +24,18 @@ jobs:
         run: |
           ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
             # Ensure UV is Installed
-            curl -LsSf https://astral.sh/uv/install.sh | &&
+            curl -LsSf https://astral.sh/uv/install.sh | sh &&
             source $HOME/.cargo/env &&
 
             cd ${{ secrets.DO_APP_DIR }} &&
             git pull origin main &&
 
             # Sync Dependencies
-            uv sync --frozen &&
+            $HOME/.local/bin/uv sync --frozen &&
 
             # Run Manage Commands
-            uv run manage.py collectstatic --noinput &&
-            uv run manage.py migrate &&
+            $HOME/.local/bin/uv run manage.py collectstatic --noinput &&
+            $HOME/.local/bin/uv run manage.py migrate &&
 
             # Restart Services
             sudo systemctl restart gunicorn &&
