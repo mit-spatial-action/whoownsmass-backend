@@ -13,9 +13,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 import environ
+import platform
 
 env = environ.Env()
 env.read_env()
+
+if platform.system() == 'Darwin':  # macOS
+    # Standard Homebrew path for Apple Silicon (M1/M2/M3)
+    GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+    GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
 
 BASE_DIR = Path(__file__).resolve().parent
 
