@@ -24,8 +24,8 @@ jobs:
         run: |
           ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
             # Ensure UV is Installed
-            curl -LsSf https://astral.sh/uv/install.sh | &&
-            source $HOME/.cargo/env &&
+            curl -LsSf https://astral.sh/uv/install.sh | sh &&
+            source $HOME/.local/bin/env &&
 
             cd ${{ secrets.DO_APP_DIR }} &&
             git pull origin main &&
