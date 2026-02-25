@@ -76,7 +76,7 @@ dependencies = [
     "pyyaml==6.0.2",
     "rich==14.1.0",
     "rich-toolkit==0.14.9",
-    "rignore==0.6.4",
+    "rignore==0.7.6",
     "sentry-sdk==2.34.1",
     "shapely==2.1.1",
     "shellingham==1.5.4",
