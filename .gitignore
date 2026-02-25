@@ -2,6 +2,7 @@
 .python-version
 
 venv/
+.venv/
 .env
 settings_local.py
 settings.json

@@ -23,12 +23,21 @@ jobs:
       - name: Deploy to server
         run: |
           ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
+            # Ensure UV is Installed
+            curl -LsSf https://astral.sh/uv/install.sh | &&
+            source $HOME/.cargo/env &&
+
             cd ${{ secrets.DO_APP_DIR }} &&
             git pull origin main &&
-            source venv/bin/activate &&
-            pip install -r requirements.txt &&
-            python manage.py collectstatic --noinput &&
-            python manage.py migrate &&
+
+            # Sync Dependencies
+            uv sync --frozen &&
+
+            # Run Manage Commands
+            uv run manage.py collectstatic --noinput &&
+            uv run manage.py migrate &&
+
+            # Restart Services
             sudo systemctl restart gunicorn &&
             sudo systemctl daemon-reload &&
             sudo systemctl restart nginx
