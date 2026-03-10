@@ -38,7 +38,7 @@ jobs:
             uv run manage.py migrate &&
 
             # Restart Services
-            sudo -n systemctl restart gunicorn &&
             sudo -n systemctl daemon-reload &&
+            sudo -n systemctl restart whoownsmass &&
             sudo -n systemctl restart nginx
           EOF
