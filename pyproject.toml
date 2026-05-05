@@ -10,7 +10,7 @@ dependencies = [
     "djangorestframework==3.16.1",
     "djangorestframework-gis==1.2.1",
     "gunicorn>=25.1.0",
-    "psycopg>=3.3.3",
+    "psycopg>=3.3.4",
     "python-environ>=0.4.54",
     "uvicorn==0.46.0",
     "uvloop==0.22.1",
