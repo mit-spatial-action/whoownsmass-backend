@@ -84,16 +84,16 @@ wheels = [
 
 [[package]]
 name = "djangorestframework-gis"
-version = "1.2.0"
+version = "1.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "django-filter" },
     { name = "djangorestframework" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/96/fb/36b4f5d9d0fccdb17ae620c580d4b340a7b3643830e49b8cc5d8fc1eb1ee/djangorestframework_gis-1.2.0.tar.gz", hash = "sha256:702ba9ad44173b7cc70e48c6c84da48c28f6f82612cc901a77fdb54c5c57c971", size = 50983, upload-time = "2025-06-02T19:22:41.411Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/01/cb/548d66f261c1bd94ccddafccf7db5a03e1db324075e4f1243b32185afe98/djangorestframework_gis-1.2.1.tar.gz", hash = "sha256:649ad0cb361dd85f2113b1796248eb2b198a01fa3d64c5e486106224c0ad51fd", size = 50304, upload-time = "2026-05-04T17:02:15.524Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/64/86/b7e85e372ecc97dc1344785f82dc0c51c2b2c8b1d2b8660d3d8752fd1b3c/djangorestframework_gis-1.2.0-py2.py3-none-any.whl", hash = "sha256:3924651b2f6dcb5a64b30df9692577af548a04725b0c2c36cbc385f7c50fc80a", size = 22254, upload-time = "2025-06-02T19:22:39.214Z" },
+    { url = "https://files.pythonhosted.org/packages/8e/db/ffb8914cd0ee6d63d3e3f0f4a8d9d07d8b945e2287d6048316a542dcb4e5/djangorestframework_gis-1.2.1-py2.py3-none-any.whl", hash = "sha256:73acb51918b18e484407c0fff61aca11a1f5a216fa694bc4c0c734b7097ecc77", size = 21901, upload-time = "2026-05-04T17:02:13.632Z" },
 ]
 
 [[package]]
@@ -222,7 +222,7 @@ requires-dist = [
     { name = "django", specifier = "==6.0.4" },
     { name = "django-extensions", specifier = "==4.1" },
     { name = "djangorestframework", specifier = "==3.16.1" },
-    { name = "djangorestframework-gis", specifier = "==1.2.0" },
+    { name = "djangorestframework-gis", specifier = "==1.2.1" },
     { name = "gunicorn", specifier = ">=25.1.0" },
     { name = "psycopg", specifier = ">=3.3.3" },
     { name = "python-environ", specifier = ">=0.4.54" },
