@@ -9,7 +9,7 @@ dependencies = [
     "django-extensions==4.1",
     "djangorestframework==3.17.1",
     "djangorestframework-gis==1.2.1",
-    "gunicorn>=25.1.0",
+    "gunicorn>=26.0.0",
     "psycopg>=3.3.4",
     "python-environ>=0.4.54",
     "uvicorn==0.46.0",
